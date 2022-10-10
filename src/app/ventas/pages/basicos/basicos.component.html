@@ -1,0 +1,61 @@
+<div class="text-layout">
+    <h1>Pipes Personalizados</h1>
+    <p>Pipes incluidos en angular - Usualmente utilizados en el common module</p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Uppercase" [subheader]="nombreLower | uppercase">
+            Valor original: {{nombreLower}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Lowercase" [subheader]="nombreUpper | lowercase">
+            Valor original: {{nombreUpper}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Titlecase" [subheader]="nombreCompleto | titlecase">
+            Valor original: {{nombreCompleto}}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>Pipe para mostras fechas</p>
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+            <!-- https://angular.io/api/common/DatePipe -->
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date</li>
+                <li>fecha | date: short</li>
+                <li>fecha | date: d MMM, yyyy</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>fecha | date:'long'</li>
+                <li>fecha | date:'long':'GMT-4'</li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date}}</li>
+                <li>{{fecha | date:'shortTime'}}</li>
+                <li>{{fecha | date:'d MMM, yyyy'}}</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>{{fecha | date:'long'}}</li>
+                <li>{{fecha | date:'long':'GMT-4'}}</li>
+            </ul>
+        </p-card>
+    </div>
+</div>

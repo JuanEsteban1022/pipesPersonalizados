@@ -1,0 +1,24 @@
+<div class="text-layout">
+    <h1>DecimalPipes</h1>
+    <p>Pipes decimales en angular</p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Ventas Netas" subheader="Ventas netas del año">
+            <i class="pi pi-dollar"></i>
+            <!-- Toma la parte entera y dos decimales -->
+            {{ventasNetas | number:'1.2-2'}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Ventas Brutas" subheader="Ventas Brutas del año">
+            {{ventasNetas + 20000000 | currency:'CAD':'symbol-narrow':'1.4-4'}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Ganancia porcentual" subheader="Ganancia porcentual del año">
+            {{porcentaje | percent:'2.2-2'}}
+        </p-card>
+    </div>
+</div>
